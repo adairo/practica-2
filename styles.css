@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&display=swap");
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  background-color: #006672;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 2em);
+}
+
+.nav-title {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+  background-color: #4DD0E1;
+  padding: 0.8em 1em;
+  display: flex;
+}
+
+.nav-title .flex {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  max-width: 160px;
+}
+
+@media (max-width: 750px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-title .flex {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.nav-bar {
+  background-color: #00ACC1;
+  padding: 0.6em 1em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-bar > li {
+  list-style: none;
+}
+
+.nav-bar a:hover {
+  background-color: #B2EBF2;
+  border-radius: 3em;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  background-color: transparent;
+  grid-area: main;
+}
+
+aside {
+  padding: 1em;
+  background-color: white;
+  grid-area: aside;
+}
+
+aside a {
+    color: #006672;
+    font-size: 1.3rem;
+}
+
+aside li {
+    margin-bottom: 0.6rem;
+}
+
+aside > h2 {
+    margin-bottom: 0.4em;
+}
+
+footer {
+  background-color: aquamarine;
+  grid-area: footer;
+  padding: 1em;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "main aside"
+    "footer footer";
+  gap: 0.7em;
+  padding: 0.7em;
+  flex-grow: 1;
+}
+
+@media (max-width: 1200px) {
+  .main-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .main-grid {
+    grid-template-areas:
+      "main main"
+      "aside aside"
+      "footer footer";
+  }
+}
+.card-grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, 1fr);
+}
+
+.card {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card  a {
+    background-color: #E0F7FA;
+
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0.4em 0.5em;
+}
+img {
+  max-width: 100%;
+}
+
+/* Styles for each page*/
+
+.main-content {
+    background-color: white;
+    padding: 0.7em 1em;
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    
+}
+
+.main-content h1 {
+    margin-bottom: 0.6em;
+    text-transform: uppercase;
+}
+
+.main-content p {
+    margin-bottom: 0.8rem;
+}
+
+figure {
+    float: right;
+    margin: 0.8em;
+    margin-top: 0;
+    font-size: 0.8em;
+    font-style: italic;
+
+}
+.main-content img {
+    max-width: 300px;
+}
